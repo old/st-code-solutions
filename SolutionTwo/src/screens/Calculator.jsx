@@ -17,7 +17,7 @@ export default function Calculator(props) {
 
 const styles = StyleSheet.create({
     calculatorView: {
-        backgroundColor: "rgb(53, 53, 53)",
+        backgroundColor: "rgb(33, 33, 33)",
         flex: 1,
         flexDirection: "column",
 

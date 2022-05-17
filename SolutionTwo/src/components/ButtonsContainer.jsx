@@ -27,7 +27,8 @@ export default function ButtonsContainer() {
             <PrimaryButton buttonText=""/>
             <PrimaryButton buttonText=""/>
 
-            <SecondaryButton buttonText=""/>
+            <PrimaryButton buttonText=""/>
+            <PrimaryButton buttonText=""/>
             <PrimaryButton buttonText=""/>
             <PrimaryButton buttonText=""/>
         </View>
@@ -37,7 +38,11 @@ export default function ButtonsContainer() {
 
 const styles = StyleSheet.create({
     ButtonsContainerView: {
-        backgroundColor: "white",
         flex: 2,
+        flexWrap: "wrap",
+        justifyContent: "space-between",
+        flexDirection: "row"
+        
+      
     }
 })

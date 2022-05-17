@@ -3,6 +3,14 @@ import { StyleSheet, View} from 'react-native';
 
 export default function PrimaryButton(props) {
 
+    const add = () => {}
+    const subtract = () => {}
+    const multiply = () => {}
+    const divide = () => {}
+    const equal = () => {}
+    const negative = () => {}
+    const clear = () => {}
+
     return (
         <View style={styles.primaryButtonView}>
 

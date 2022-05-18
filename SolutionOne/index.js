@@ -86,7 +86,9 @@ var arr = [
       data = data.map(obj => flattenObj(obj))
       data = data.map(obj => SumObjValue(obj))
       data = data.filter((obj) => obj.guest_type === "guest")
-      
+      data = data.sort(function(a, b) {
+        return  b.first_name.localeCompare(a.first_name) || b.last_name.localeCompare(a.last_name) 
+    });
       return data
   }
   

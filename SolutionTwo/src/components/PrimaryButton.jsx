@@ -3,12 +3,6 @@ import { StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
 export default function PrimaryButton(props) {
 
-    const equals = () => {
-
-      
-//                props.setEquation({...props.equation, currentEquation: parseInt(props.equation.currentEquation) + parseInt(props.equation.previousEquation), })
-    }
-
 
     const calculate = (buttonText) => {
 
@@ -20,7 +14,7 @@ export default function PrimaryButton(props) {
             // if an operator button has not been clicked, we concat the strings together ex. "9" + "9" === "99"
             const isStartingNegative = props.equation.toString() === "-0"
             
-            if (props.equation.toString().length <= 1 && props.equation.toString() === "0") {
+            if (props.equation.toString().length === 1 && props.equation.toString() === "0") {
                
 
                 props.setEquation(buttonText)

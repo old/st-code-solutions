@@ -70,10 +70,26 @@ var arr = [
       return flattenedObj
 
   }
-  function mutateArray(a) {
-      const flattendData = a.map((obj) => flattenObj(obj))
 
-      return flattendData
+  function SumObjValue(obj) {
+
+    let sum = obj.some_array.reduce((a, b) => a + b, 0);
+
+    obj.some_array = sum
+
+    return obj
+
+
+  }
+  function mutateArray(data) {
+
+      data = data.map(obj => flattenObj(obj))
+      data = data.map(obj => SumObjValue(obj))
+      data = data.filter((obj) => obj.guest_type === "guest")
+      data = data.sort(function(a, b) {
+        return  b.first_name.localeCompare(a.first_name) || b.last_name.localeCompare(a.last_name) 
+    });
+      return data
   }
   
   $(document).ready(function() {

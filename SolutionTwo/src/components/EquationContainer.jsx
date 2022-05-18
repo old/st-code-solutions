@@ -5,7 +5,7 @@ import { StyleSheet, View, Text} from 'react-native';
 export default function EquationContainer(props) {
     return (
         <View style={styles.EquationContainerView}>
-            <Text style={styles.equationText}>0</Text>
+            <Text style={styles.equationText}>{props.equation}</Text>
         </View>
     )
     
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     equationText: {
         fontWeight: "200",
         color: "white",
-        fontSize: 130,
+        fontSize: 80,
         marginRight: 20,
     }
 

@@ -5,7 +5,6 @@ import ButtonsContainer from '../components/ButtonsContainer';
 export default function Calculator(props) {
 
     const [equation, setEquation] = useState("0")
-
     return (
         <View style={styles.calculatorView}>
             <EquationContainer equation={equation}/>
@@ -17,7 +16,7 @@ export default function Calculator(props) {
 
 const styles = StyleSheet.create({
     calculatorView: {
-        backgroundColor: "rgb(53, 53, 53)",
+        backgroundColor: "rgb(33, 33, 33)",
         flex: 1,
         flexDirection: "column",
 

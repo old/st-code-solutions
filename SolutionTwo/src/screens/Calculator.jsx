@@ -5,7 +5,6 @@ import ButtonsContainer from '../components/ButtonsContainer';
 export default function Calculator(props) {
 
     const [equation, setEquation] = useState("0")
-
     return (
         <View style={styles.calculatorView}>
             <EquationContainer equation={equation}/>

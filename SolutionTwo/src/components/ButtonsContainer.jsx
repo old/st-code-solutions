@@ -4,40 +4,33 @@ import PrimaryButton from './PrimaryButton';
 import SecondaryButton from './SecondaryButton';
 
 
-export default function ButtonsContainer() {
+export default function ButtonsContainer(props) {
 
-    const add = () => {}
-    const subtract = () => {}
-    const multiply = () => {}
-    const divide = () => {}
-    const equal = () => {}
-    const negative = () => {}
-    const clear = () => {}
     return (
         <View style={styles.ButtonsContainerView}>
-            <PrimaryButton buttonText="AC"/>
-            <PrimaryButton buttonText="+/-"/>
-            <PrimaryButton buttonText="%"/>
-            <PrimaryButton buttonText="/" isOrange={true}/>
+            <PrimaryButton buttonText="AC"  equation={props.equation} setEquation={props.setEquation}/>
+            <PrimaryButton buttonText="-" equation={props.equation} setEquation={props.setEquation}/>
+            <PrimaryButton buttonText="%"   equation={props.equation} setEquation={props.setEquation}/>
+            <PrimaryButton buttonText="/"   equation={props.equation} setEquation={props.setEquation}isOrange={true}/>
 
-            <PrimaryButton buttonText="7"/>
-            <PrimaryButton buttonText="8"/>
-            <PrimaryButton buttonText="9"/>
-            <PrimaryButton buttonText="x" isOrange={true}/>
+            <PrimaryButton buttonText="7" equation={props.equation} setEquation={props.setEquation}/>
+            <PrimaryButton buttonText="8" equation={props.equation} setEquation={props.setEquation}/>
+            <PrimaryButton buttonText="9" equation={props.equation} setEquation={props.setEquation}/>
+            <PrimaryButton buttonText="x" equation={props.equation} setEquation={props.setEquation} isOrange={true}/>
 
-            <PrimaryButton buttonText="4"/>
-            <PrimaryButton buttonText="5"/>
-            <PrimaryButton buttonText="6"/>
-            <PrimaryButton buttonText="-" isOrange={true}/>
+            <PrimaryButton buttonText="4" equation={props.equation} setEquation={props.setEquation}/>
+            <PrimaryButton buttonText="5" equation={props.equation} setEquation={props.setEquation}/>
+            <PrimaryButton buttonText="6" equation={props.equation} setEquation={props.setEquation}/>
+            <PrimaryButton buttonText="-" equation={props.equation} setEquation={props.setEquation} isOrange={true}/>
 
-            <PrimaryButton buttonText="1"/>
-            <PrimaryButton buttonText="2"/>
-            <PrimaryButton buttonText="3"/>
-            <PrimaryButton buttonText="+" isOrange={true}/>
+            <PrimaryButton buttonText="1" equation={props.equation} setEquation={props.setEquation}/>
+            <PrimaryButton buttonText="2" equation={props.equation} setEquation={props.setEquation}/>
+            <PrimaryButton buttonText="3" equation={props.equation} setEquation={props.setEquation}/>
+            <PrimaryButton buttonText="+" equation={props.equation} setEquation={props.setEquation} isOrange={true}/>
 
-            <SecondaryButton buttonText="0"/>
-            <PrimaryButton buttonText="."/>
-            <PrimaryButton buttonText="=" isOrange={true}/>
+            <SecondaryButton buttonText="0" equation={props.equation} setEquation={props.setEquation}/>
+            <PrimaryButton buttonText="."   equation={props.equation} setEquation={props.setEquation}/>
+            <PrimaryButton buttonText="="   equation={props.equation} setEquation={props.setEquation}isOrange={true}/>
         </View>
     )
     

@@ -81,11 +81,13 @@ var arr = [
 
 
   }
-  function mutateArray(a) {
-      const flattendData = a.map((obj) => flattenObj(obj))
-      const summedData = flattendData.map(obj => SumObjValue(obj))
+  function mutateArray(data) {
+
+      data = data.map(obj => flattenObj(obj))
+      data = data.map(obj => SumObjValue(obj))
+      data = data.filter((obj) => obj.guest_type === "guest")
       
-      return summedData
+      return data
   }
   
   $(document).ready(function() {

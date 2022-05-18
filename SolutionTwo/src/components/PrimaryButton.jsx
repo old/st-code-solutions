@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StyleSheet, View, Text} from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
 export default function PrimaryButton(props) {
 
@@ -12,11 +12,12 @@ export default function PrimaryButton(props) {
     const clear = () => {}
 
     return (
-        <View style={styles.primaryButtonView}>
+        <TouchableOpacity style={styles.primaryButtonView}> 
             <View style={styles.flexContainer}>
                 <Text style={styles.buttonText}>{props.buttonText}</Text>
             </View>
-        </View>
+        </TouchableOpacity>
+
     )
 }
 
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
 
     primaryButtonView: { // props.isOrange ? "FFA500" 
         backgroundColor:  "#c0c0c0",
-        borderWidth: 0.3,
+        borderWidth: 0.4,
         borderColor: "rgb(33, 33, 33)",
         height: '20%',
         width: '25%',

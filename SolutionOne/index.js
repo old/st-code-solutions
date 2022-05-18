@@ -70,10 +70,22 @@ var arr = [
       return flattenedObj
 
   }
+
+  function SumObjValue(obj) {
+
+    let sum = obj.some_array.reduce((a, b) => a + b, 0);
+
+    obj.some_array = sum
+
+    return obj
+
+
+  }
   function mutateArray(a) {
       const flattendData = a.map((obj) => flattenObj(obj))
-
-      return flattendData
+      const summedData = flattendData.map(obj => SumObjValue(obj))
+      
+      return summedData
   }
   
   $(document).ready(function() {

@@ -6,31 +6,110 @@ import SecondaryButton from './SecondaryButton';
 
 export default function ButtonsContainer(props) {
 
+    const buttons = [
+        {
+            text: "AC", 
+            isLong: false,
+            isOrange: false
+        },
+        {
+            text: "-", 
+            isLong: false,
+            isOrange: false
+        },
+        {
+            text: "%", 
+            isLong: false,
+            isOrange: false
+        },
+        {
+            text: "/", 
+            isLong: false,
+            isOrange: true
+        },
+        {
+            text: "7", 
+            isLong: false,
+            isOrange: false
+        },
+        {
+            text: "8", 
+            isLong: false,
+            isOrange: false
+        },
+        {
+            text: "9", 
+            isLong: false,
+            isOrange: false
+        },
+        {
+            text: "*", 
+            isLong: false,
+            isOrange: true
+        },
+        {
+            text: "4", 
+            isLong: false,
+            isOrange: false
+        },
+        {
+            text: "5", 
+            isLong: false,
+            isOrange: false
+        },
+        {
+            text: "6", 
+            isLong: false,
+            isOrange: false
+        },
+
+        {
+            text: "-", 
+            isLong: false,
+            isOrange: true
+        },
+        {
+            text: "1", 
+            isLong: false,
+            isOrange: false
+        },
+        {
+            text: "2", 
+            isLong: false,
+            isOrange: false
+        },
+
+        {
+            text: "3", 
+            isLong: false,
+            isOrange: false
+        },
+        {
+            text: "+", 
+            isLong: false,
+            isOrange: true
+        },
+        {
+            text: "0", 
+            isLong: true,
+            isOrange: false
+        },
+        {
+            text: ".", 
+            isLong: false,
+            isOrange: false
+        },
+        {
+            text: "=", 
+            isLong: false,
+            isOrange: false
+        },
+
+    ]
+
     return (
         <View style={styles.ButtonsContainerView}>
-            <PrimaryButton buttonText="AC"  equation={props.equation} setEquation={props.setEquation}/>
-            <PrimaryButton buttonText="-" equation={props.equation} setEquation={props.setEquation}/>
-            <PrimaryButton buttonText="%"   equation={props.equation} setEquation={props.setEquation}/>
-            <PrimaryButton buttonText="/"   equation={props.equation} setEquation={props.setEquation}isOrange={true}/>
-
-            <PrimaryButton buttonText="7" equation={props.equation} setEquation={props.setEquation}/>
-            <PrimaryButton buttonText="8" equation={props.equation} setEquation={props.setEquation}/>
-            <PrimaryButton buttonText="9" equation={props.equation} setEquation={props.setEquation}/>
-            <PrimaryButton buttonText="*" equation={props.equation} setEquation={props.setEquation} isOrange={true}/>
-
-            <PrimaryButton buttonText="4" equation={props.equation} setEquation={props.setEquation}/>
-            <PrimaryButton buttonText="5" equation={props.equation} setEquation={props.setEquation}/>
-            <PrimaryButton buttonText="6" equation={props.equation} setEquation={props.setEquation}/>
-            <PrimaryButton buttonText="-" equation={props.equation} setEquation={props.setEquation} isOrange={true}/>
-
-            <PrimaryButton buttonText="1" equation={props.equation} setEquation={props.setEquation}/>
-            <PrimaryButton buttonText="2" equation={props.equation} setEquation={props.setEquation}/>
-            <PrimaryButton buttonText="3" equation={props.equation} setEquation={props.setEquation}/>
-            <PrimaryButton buttonText="+" equation={props.equation} setEquation={props.setEquation} isOrange={true}/>
-
-            <SecondaryButton buttonText="0" equation={props.equation} setEquation={props.setEquation}/>
-            <PrimaryButton buttonText="."   equation={props.equation} setEquation={props.setEquation}/>
-            <PrimaryButton buttonText="="   equation={props.equation} setEquation={props.setEquation}isOrange={true}/>
+            {buttons.map(button => <PrimaryButton buttonText={button.text} isOrange={button.isOrange} isLong={button.isLong}/>)}
         </View>
     )
     

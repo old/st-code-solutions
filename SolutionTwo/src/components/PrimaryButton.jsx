@@ -51,7 +51,7 @@ export default function PrimaryButton(props) {
   
 
     return (
-        <TouchableOpacity style={styles.primaryButtonView(props?.isOrange)} onPress={() => {calculate(props.buttonText)}}> 
+        <TouchableOpacity style={styles.primaryButtonView(props?.isOrange, props?.isLong)} onPress={() => {calculate(props.buttonText)}}> 
             <View style={styles.flexContainer}>
                 <Text style={styles.buttonText}>{props.buttonText}</Text>
             </View>
@@ -62,13 +62,13 @@ export default function PrimaryButton(props) {
 
 const styles = StyleSheet.create({
 
-    primaryButtonView: (buttonColor)  => { 
+    primaryButtonView: (buttonColor, isLong)  => { 
         return {
             backgroundColor:  buttonColor ? "#ff9529" : "#c0c0c0",
             borderWidth: 0.4,
             borderColor: "rgb(33, 33, 33)",
             height: '20%',
-            width: '25%',
+            width: isLong ? '50%' : '25%',
         }
 
     },

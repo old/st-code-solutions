@@ -16,7 +16,7 @@ export default function ButtonsContainer(props) {
             <PrimaryButton buttonText="7" equation={props.equation} setEquation={props.setEquation}/>
             <PrimaryButton buttonText="8" equation={props.equation} setEquation={props.setEquation}/>
             <PrimaryButton buttonText="9" equation={props.equation} setEquation={props.setEquation}/>
-            <PrimaryButton buttonText="x" equation={props.equation} setEquation={props.setEquation} isOrange={true}/>
+            <PrimaryButton buttonText="*" equation={props.equation} setEquation={props.setEquation} isOrange={true}/>
 
             <PrimaryButton buttonText="4" equation={props.equation} setEquation={props.setEquation}/>
             <PrimaryButton buttonText="5" equation={props.equation} setEquation={props.setEquation}/>

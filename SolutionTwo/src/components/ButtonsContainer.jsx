@@ -109,7 +109,7 @@ export default function ButtonsContainer(props) {
 
     return (
         <View style={styles.ButtonsContainerView}>
-            {buttons.map(button => <PrimaryButton buttonText={button.text} isOrange={button.isOrange} isLong={button.isLong}/>)}
+            {buttons.map(button => <PrimaryButton buttonText={button.text} isOrange={button.isOrange} isLong={button.isLong} equation={props.equation} setEquation={props.setEquation}/>)}
         </View>
     )
     

@@ -10,11 +10,15 @@ export default function PrimaryButton(props) {
         
         const operator = operators.find((op) => op === buttonText)
 
+        console.log("error")
+        console.log(props)
+
         if (operator === undefined) {
-            // if an operator button has not been clicked, we concat the strings together ex. "9" + "9" === "99"
-            const isStartingNegative = props.equation.toString() === "-0"
+            // if an operator button has not been clicked, we concat the equation together ex. "9" + "9" === "99"
             
             if (props.equation.toString().length === 1 && props.equation.toString() === "0") {
+                // if it is the starting number "0", once a button is clicked, the starting 0 gets removed/replaced 
+                // with the button that has been clicked
                
 
                 props.setEquation(buttonText)
@@ -24,17 +28,18 @@ export default function PrimaryButton(props) {
 
         } else {
             // if an operator button has been clicked, we handle the state based on the operator   
-                
-                let solution = 0
 
                 switch (operator) {
                     case "AC":
+                        // "AC" is the clear operator. when the "AC" button is clicked the equatiokn state is reset (cleared)
                         props.setEquation("0")
                         break
                     case "+/-":
+                        // "+/-" is a operator that converts the number into a negative number ex. "2" -> "-3"
                        "-" + props.equation.currentEquation.toString()
                         break
                     case "=":
+                        // "=" solves the equation by passing it through eval()
                        props.setEquation(eval(props.equation.toString()))
                         break
                 }
